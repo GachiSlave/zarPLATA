@@ -1,5 +1,14 @@
-APPLICATION = prosoft6
+
+# Makefile задает правила сборки проекта
+
+# Название проекта
+# Влияет на то, как будет называться файл прошивки
+APPLICATION = ipc
+
+# Путь, по которому располагается корень исходников RIOT
+# Путь задается относительно текущей папки. 
 RIOTBASE ?= $(CURDIR)/../RIOT/
+
 # Название платы, для которой происходит сборка проекта
 BOARD ?= stm32f0discovery
 
@@ -15,7 +24,7 @@ FEATURES_REQUIRED += periph_timer
 # Запрос функции GPIO
 FEATURES_REQUIRED += periph_gpio
 
-# Запрос функции прерываний от GPIO
+# Запрос функции GPIO
 FEATURES_REQUIRED += periph_gpio_irq
 
 # Подлючение другого Makefile
